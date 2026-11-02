@@ -1,0 +1,35 @@
+# ---- CMake / CUDA library build output ----
+CudaLibrary/out/
+CudaLibrary/Debug/
+CudaLibrary/Release/
+CudaLibrary/cmake-build-*/
+
+# ---- IDE state ----
+.vs/
+**/.vs/
+**/.idea/workspace.xml
+**/.idea/tasks.xml
+**/.idea/usage.statistics.xml
+**/.idea/shelf/
+*.user
+*.suo
+
+# ---- Unreal Engine (for the UE project when it is added) ----
+**/Binaries/
+**/Intermediate/
+**/Saved/
+**/DerivedDataCache/
+**/Build/
+*.sln
+*.slnx
+*.VC.db
+*.VC.opendb
+
+# Keep prebuilt third-party DLLs the UE project ships with
+!**/ThirdParty/**/Binaries/
+
+# ---- Recorded motion data can get large; decide later whether to track it ----
+# Recordings/
+
+# ---- Backups ----
+_backup_*/
