@@ -44,7 +44,9 @@ void AArcheryReplayPlayer::BeginPlay()
 	{
 		if (APlayerController* PlayerController{ GetWorld()->GetFirstPlayerController() })
 		{
+			// Move = WASD / Up / Down / Space, look = mouse and the Left / Right arrows (default pawn turning).
 			PlayerController->SetIgnoreMoveInput(true);
+			PlayerController->SetIgnoreLookInput(true);
 		}
 	}
 

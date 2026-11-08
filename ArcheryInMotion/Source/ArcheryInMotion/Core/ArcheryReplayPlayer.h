@@ -1,14 +1,3 @@
-// Plays back recorded shots on a mannequin. Place one in the level and press Play.
-//
-// Keys (click into the game viewport first):
-//   Left / Right   previous / next shot (re-reads shots.csv, so new shots show up)
-//   Up / Down      previous / next session
-//   P              play / pause
-//   , / .          one frame back / forward (pauses)
-//   - / =          slower / faster
-//   R              back to the start of the shot
-//   T              jump to the Space press (t = 0)
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -30,6 +19,15 @@ struct FReplayAttempt
 	FString Rating; // empty = not rated
 	double StopPressT{ 0.0 };
 };
+
+// Keys:
+//   Left / Right   previous / next shot (re-reads shots.csv, so new shots show up)
+//   Up / Down      previous / next session
+//   P              play / pause
+//   , / .          one frame back / forward (pauses)
+//   - / =          slower / faster
+//   R              back to the start of the shot
+//   T              jump to the Space press (t = 0)
 
 UCLASS()
 class ARCHERYINMOTION_API AArcheryReplayPlayer : public AActor

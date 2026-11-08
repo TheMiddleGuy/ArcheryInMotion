@@ -66,9 +66,7 @@ void FArcheryReplaySource::PushPose(FName SubjectName, const FMocopiSkeleton& Sk
 	FLiveLinkFrameDataStruct FrameDataStruct{ FLiveLinkAnimationFrameData::StaticStruct() };
 	FLiveLinkAnimationFrameData& FrameData{ *FrameDataStruct.Cast<FLiveLinkAnimationFrameData>() };
 	FrameData.Transforms.SetNum(NumBones);
-
-	// Same as the plugin's UpdateFrameData: the root gets its recorded position, every other
-	// bone its fixed offset from the skeleton. All bones get their recorded rotation.
+	
 	for (int32 Bone{ 0 }; Bone < NumBones; ++Bone)
 	{
 		FQuat Rotation{ Frame.LocalRotations.IsValidIndex(Bone) ? FQuat(Frame.LocalRotations[Bone]) : FQuat::Identity };
